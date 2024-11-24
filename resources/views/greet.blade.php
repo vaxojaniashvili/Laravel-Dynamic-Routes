@@ -6,6 +6,6 @@
     <title>Greeting</title>
 </head>
 <body>
-<div>My name is: {{ $name }}</div>
+<div>My name is {{ $name }} and i am {{ $age }} years old,</div>
 </body>
 </html>

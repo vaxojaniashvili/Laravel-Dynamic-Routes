@@ -7,8 +7,8 @@
     @csrf
     <label for="text">Please enter your name</label>
     <input type="text" id="text" name="textInput">
-{{--    <label for="number">Please enter your age</label>--}}
-{{--    <input type="number" id="number">--}}
+    <label for="number">Please enter your age</label>
+    <input type="number" id="number" name="ageInput">
     <button type="submit">Click</button>
 </form>
 </body>
