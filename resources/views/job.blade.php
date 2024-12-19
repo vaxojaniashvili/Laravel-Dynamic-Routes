@@ -6,6 +6,8 @@
     <title>Greeting</title>
 </head>
 <body>
-<div>My name is {{ $name }} and i am {{ $age }} years old</div>
+    <li style="border: 1px solid black;width: 450px;padding: 10px;cursor: pointer">
+       Title : <strong>{{ $jobs["title"] }}</strong>,  Salary: <strong>{{ $jobs["salary"] }}</strong>
+    </li>
 </body>
 </html>
