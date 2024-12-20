@@ -2,8 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GreetController;
-
 Route::get("/", function () {
+    return view("home");
+});
+
+Route::get("/register", function () {
     return view("welcome");
 });
 
@@ -54,9 +57,8 @@ Route::get("/jobs/{id}", function ($id) {
             ],
         ];
     $job = \Illuminate\Support\Arr::first($jobs, fn($job) => $job["id"] === (int)$id);
-
     if(!$job) {
-        abort(404,"Job not found");
+        abort(404,"Not found");
     }
     return view("job",["jobs" => $job]);
 });
