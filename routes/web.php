@@ -41,7 +41,6 @@ Route::get("/jobs", function () {
     ]);
 });
 
-//es ar mushaaobs da unda gavfixo controlershi gavitane ://
 //Route::get("/jobs", function () {
 //    return view("jobs",[AllJobsController::class,"allJobs"]);
 //});
