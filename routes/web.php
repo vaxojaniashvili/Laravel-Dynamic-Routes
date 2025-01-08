@@ -1,13 +1,14 @@
 <?php
 
 use App\Http\Controllers\AllJobsController;
-use App\Http\Controllers\JobsController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GreetController;
+use App\Models\Job;
+
 Route::get("/", function () {
     return view("home");
 });
@@ -18,26 +19,7 @@ Route::get("/register", function () {
 
 Route::get("/jobs", function () {
     return view("jobs",[
-        "jobs" => [
-            [
-                "id" => 1,
-                "title" => "Web Developer",
-                "salary" => "30,000$",
-                "location" => "Georgia",
-            ],
-            [
-                "id" => 2,
-                "title" => "UI/UX Designer",
-                "salary" => "10,000$",
-                "location" => "Bangladesh",
-            ],
-            [
-                "id" => 3,
-                "title" => "Cyber Security",
-                "salary" => "60,000$",
-                "location" => "Russia",
-            ],
-        ]
+        "jobs" => Job::all()
     ]);
 });
 
@@ -45,7 +27,10 @@ Route::get("/jobs", function () {
 //    return view("jobs",[AllJobsController::class,"allJobs"]);
 //});
 
-Route::get("/jobs/{id}", [JobsController::class,"jobsById"]);
+Route::get("/jobs/{id}", function($id) {
+    $job = Job::find($id);
+    return view("job",["jobs" => $job]);
+});
 
 Route::get("/pages/{category}/{id}",[PagesController::class,"validationPages"])->where([
     "category" => "[a-zA-z]+",
