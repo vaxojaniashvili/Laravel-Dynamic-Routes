@@ -15,6 +15,10 @@
             style="text-decoration: none;;color: black;border: 1px solid black;padding: 10px;border-radius: 50px;cursor: pointer"
             href="/jobs">Jobs
         </a>
+        <a
+            style="text-decoration: none;;color: black;border: 1px solid black;padding: 10px;border-radius: 50px;cursor: pointer"
+            href="/users">Users
+        </a>
     </nav>
 </body>
 </html>

@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\AllJobsController;
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\TestController;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GreetController;
@@ -20,6 +18,12 @@ Route::get("/register", function () {
 Route::get("/jobs", function () {
     return view("jobs",[
         "jobs" => Job::all()
+    ]);
+});
+
+Route::get("/users", function () {
+    return view("users", [
+        "users" => User::all()
     ]);
 });
 

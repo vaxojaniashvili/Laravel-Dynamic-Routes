@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Jobs</h1>
-    <ul style="display: flex;flex-direction: column;gap: 15px">
+    <ul style="display: flex;justify-content:center;: column;gap: 50px;flex-wrap: wrap;">
         @foreach ($jobs as $job)
             <a style="text-decoration: none;color: #2d3748;width: 450px" href="/jobs/{{ $job["id"] }}">
                 <li style="border: 1px solid black;width: 450px;padding: 10px;cursor: pointer">
