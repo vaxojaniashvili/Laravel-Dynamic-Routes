@@ -22,6 +22,7 @@ Route::get("/jobs", function () {
     return response()->json(Job::all());
 });
 
+
 Route::get("/users", function () {
     return view("users", [
         "users" => User::all()
