@@ -5,7 +5,7 @@
             "use": "@vercel/static"
         },
         {
-            "src": "public/index.php",
+            "src": "api/index.php",
             "use": "@vercel/php"
         }
     ],
