@@ -16,9 +16,10 @@ Route::get("/register", function () {
 });
 
 Route::get("/jobs", function () {
-    return view("jobs",[
-        "jobs" => Job::all()
-    ]);
+//    return view("jobs",[
+//        "jobs" => Job::all()
+//    ]);
+    return response()->json(Job::all());
 });
 
 Route::get("/users", function () {
